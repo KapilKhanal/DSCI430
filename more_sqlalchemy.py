@@ -4,7 +4,7 @@ from sqlalchemy.sql.elements import _interpret_as_column_or_from
 from sqlalchemy.sql.annotation import AnnotatedColumn
 from sqlalchemy import column
 from functoolz import pipeable
-
+from sqlparse import format
 
 DTYPES_TO_SQLALCHEMY_TYPES = {'O':String,
                               'i':Integer,
@@ -12,7 +12,12 @@ DTYPES_TO_SQLALCHEMY_TYPES = {'O':String,
                               'M':DateTime}
 
 
-def get_spark_types(df):
+pprint = lambda stmt: print(format(str(stmt),
+                             reindent=True, 
+                             keyword_case='upper'))
+
+
+def get_sql_types(df):
     sql_type = lambda dtype: DTYPES_TO_SQLALCHEMY_TYPES[dtype.kind] 
     cols_and_dtypes = lambda df: zip(df.columns, df.dtypes)
     return {col:sql_type(dtype) 
