@@ -16,7 +16,7 @@ def read_chunk(file,size):
     chunk = pd.read_csv(file,chunksize=size,sep = "|")
     return chunk
 
-df_iterators = [read_chunk(filePath,CHUNK_SIZE) for filePath in filePaths]
+df_iterators = [read_chunk(filePath,CHUNK_SIZE) for filePath in filePaths[1:]]
 first_chunks = [first(df) for df in df_iterators]
 cols_set = [set(df.columns) for df in first_chunks]
 
@@ -64,7 +64,6 @@ filepaths = [
  './Data/MinneMUDAC/2005_metro_tax_parcels.txt',
  './Data/MinneMUDAC/2013_metro_tax_parcels.txt',
  './Data/MinneMUDAC/2014_metro_tax_parcels.txt',
- './Data/MinneMUDAC/2002_metro_tax_parcels.txt',
  './Data/MinneMUDAC/2008_metro_tax_parcels.txt',
  './Data/MinneMUDAC/2010_metro_tax_parcels.txt',
  './Data/MinneMUDAC/2006_metro_tax_parcels.txt',
