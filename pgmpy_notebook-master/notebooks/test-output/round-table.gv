@@ -1,0 +1,11 @@
+// Avengors
+digraph {
+	D [label=Durability]
+	S [label=survived]
+	T [label="Time Powers"]
+	Sk [label=Skills]
+	M [label="Matter Manipulation"]
+	Mg [label=Magic]
+	Mi [label="Mind Powers"]
+	D -> S
+}

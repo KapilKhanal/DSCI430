@@ -35,6 +35,7 @@ monitor = pd.read_csv('./Data/MinneMUDAC/references/Parcel_Lake_Monitoring_Site_
 
 lake_set = set(lake.DNR_ID_Site_Number)
 monitor_set = set(monitor.Monit_MAP_CODE1)
+common_id = lake_set.intersection(monitor_set)
 
 diff_codes_lake_monitor_set = lake_set.difference(monitor_set)
 
@@ -47,10 +48,10 @@ lake_code_table = (lake
                          )
 lake_code_dict =  dict(zip(lake_code_table['DNR_ID_Site_Number'],lake_code_table["LAKE_NAME"]))
 
-lat_long_distance_dict = {(str(round(float(latitude),5)),str(round(float(longitude),5))):distance 
-                     for latitude,longitude,distance in
-                              zip(monitor.centroid_lat,monitor.centroid_long,monitor.Distance_Parcel_Lake_meters)}
-lat_long_tuple = set(lat_long_tuple for lat_long_tuple in lat_long_distance_dict.keys())
+lat_long_distance_ID_dict = {(str(round(float(latitude),5)),str(round(float(longitude),5))):(distance,id_site) 
+                     for latitude,longitude,distance,id_site in
+                              zip(monitor.centroid_lat,monitor.centroid_long,monitor.Distance_Parcel_Lake_meters,monitor.Monit_MAP_CODE1)}
+lat_long_tuple = set(lat_long_tuple for lat_long_tuple in lat_long_distance_ID_dict.keys())
 
 
 def read_chunk(file,size):
@@ -76,18 +77,19 @@ for iterables in list_of_chunk_iter:
         list_of_chunk.append(chunk)
 parcel_lat_long_listofSet = [set(zip(X.centroid_lat,X.centroid_long)) for X in list_of_chunk]
 parcel_lat_long_Set = set(lat_long for lat_long_set in parcel_lat_long_listofSet for lat_long in lat_long_set)
+
+common_lat_long = lat_long_tuple.intersection(parcel_lat_long_Set)
 lake_lat_long = (lake
              >> select(X.DNR_ID_Site_Number, X.latitude, X.longitude) \
              >> group_by(X.DNR_ID_Site_Number,X.latitude, X.longitude) \
              >> summarise(counts = n(X.DNR_ID_Site_Number)) \
              >> drop(X.counts))
-lat_long_ID_tuple = {(str(round(float(latitude),5)),str(round(float(longitude),5)),id_site )
-                     for latitude,longitude,id_site in
-                              zip(lake_lat_long.latitude,lake_lat_long.longitude,lake_lat_long.DNR_ID_Site_Number)}
+lat_long_ID_tuple = {(str(round(float(latitude),5)),str(round(float(longitude),5)),id_site,distance )
+                     for (latitude,longitude),(distance,id_site) in
+                              lat_long_distance_ID_dict.items() if (latitude,longitude) in common_lat_long and id_site in common_id }
 
-lat_long_id__lake_dict = {(lat,long):(id_site,lake_code_dict[id_site]) 
-                    for lat,long,id_site in lat_long_ID_tuple }
-        
+lat_long_id__lake_dict = {(lat,long):(id_site,lake_code_dict[id_site],distance) 
+                    for lat,long,id_site,distance in lat_long_ID_tuple if (lat,long) in common_lat_long and id_site in common_id }
 
 
 

@@ -1,0 +1,376 @@
+<html lang="en"><head><META http-equiv="Content-Type" content="text/html; charset=utf-16"><font face="calibri"><title> 
+					Metadata: MetroGIS Regional Parcel Dataset - (July 2018)</title></font><meta name="viewport" content="width=device-width, initial-scale=1.0"><style type="text/css">
+				body {
+					color: #000020;
+					background-color: #FFFFFF;
+				}
+				h1 {
+				}
+				.center {
+					text-align: center;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}
+				div.box {
+					margin-left: 1em;
+				}
+				div.hide {
+					display: none;
+				}
+				div.show {
+					display: block;
+				}
+				span.hide {
+					display: none;
+				}
+				span.show {
+					display: inline-block;
+				}
+				.backToTop a {
+					color: #DDDDDD;
+					font-style: italic;
+					font-size: 0.85em;
+					}
+				.head {
+					font-size: 1.3em;
+				}
+				a:link {
+					color: #098EA6;
+					font-weight: normal;
+					text-decoration: none;
+				}
+				a:visited {
+					color: #098EA6;
+					text-decoration: none;
+				}
+				a:link:hover, a:visited:hover {
+					color: #007799;
+					background-color: #C6E6EF;
+				}
+				 a:focus, a:hover {
+				   background-color: #C6E6EF;
+				   text-decoration: none
+				 }
+				h2 {
+					background: #dfdbcf;
+					padding: 0px 0px 0px 10px;
+				}
+				h2 a {
+				}
+				h3 {
+				}
+				tr {
+					vertical-align: top;
+					border: 1px solid black;
+				}
+				th {
+					text-align: left;
+					background: #dddddd;
+					vertical-align: bottom;
+				}
+				td {
+					color: black;
+					vertical-align: top;
+					border: 1px solid black;
+				}
+					td.description {
+					background: white;
+				}
+				div.mgmgel {
+					padding: 5px 0px 0px 10px;
+                    display: table;
+					font-size: 1em;
+                }
+                div.mgmgel span:nth-child(1){
+					display: table-cell;
+					width: 30%;
+					font-weight: bold;
+                }
+				@media(min-width:600px){
+					div.mgmgel span:nth-child(1){width: 300px}
+				}
+                div.mgmgel span:nth-child(2){
+					display: table-cell;
+                }
+				.unused {
+					color:787862;
+				}
+				table {
+					margin: 0px 10px 0px 10px;
+					border: 1px solid black;
+					font-size: .9em;
+				}
+				div.smallish {
+					font-size: .8em;
+					color:939393;
+				}
+			</style></head><body><font face="calibri"><div class="mgmg"><A name="thetop"></A><center><h1>MetroGIS Regional Parcel Dataset - (July 2018)</h1></center><div class="smallish"><center>
+						This page last updated:
+						07/10/2018</center><center>
+						Metadata created using <A href="https://www.mngeo.state.mn.us/committee/standards/mgmg/metadata.htm">Minnesota Geographic Metadata Guidelines</A></center></div><BR><HR><span>Go to Section:</span><BR><ol><li><a href="#Identification_Information">Overview</a></li><li><a href="#Data_Quality_Information">Data Quality</a></li><li class="unused">Data Organization</li><li><a href="#Spatial_Reference_Information">Coordinate System</a></li><li><a href="#Entity_and_Attribute_Information">Attributes</a></li><li><a href="#Distribution_Information">Distribution</a> - <a href="#ordering"><font color="#B40404">Get Data</font></a></li><li><a href="#Metadata_Reference_Information">Metadata Reference</a></li></ol><h2><A NAME="Identification_Information"></A>
+					Section 1: Overview
+				</h2><div class="mgmgel"><span>Originator:</span><span>Counties of Anoka, Carver, Dakota, Hennepin, Ramsey, Scott and Washington</span></div><br><div class="mgmgel"><span>
+						Title: 
+					</span><span>MetroGIS Regional Parcel Dataset - (July 2018)</span></div><br><div class="mgmgel"><span>
+						Abstract: 
+					</span><span><b>For the most current quarterly update, please see the <i>new</i> Metro Regional Parcel Dataset</b> at <a target="_blank" href="https://gisdata.mn.gov/dataset/us-mn-state-metrogis-plan-regional-parcels">https://gisdata.mn.gov/dataset/us-mn-state-metrogis-plan-regional-parcels</a>.  The quarterly update of the Regional Parcel Dataset has transitioned to the new MN Parcel Data Transfer Standard schema.  
+<br>
+<br>This July 2018 version in the former schema will remain on the Commons for a period of time so users have time to transition to the new schema.
+<br>
+<br>This dataset includes all 7 metro counties that have made their parcel data freely available without a license or fees.  
+<br>
+<br>This dataset is a compilation of tax parcel polygon and point layers assembled into a common coordinate systems from Twin Cities, Minnesota metropolitan area counties.  No attempt has been made to edgematch or rubbersheet between counties.  A standard set of attribute fields is included for each county.  (See section 5 of the metadata).  The attributes are the same for the polygon and points layers.  Not all attributes are populated for all counties.  Summary attribute  information is in the Attributes Overview.  Detailed information about the attributes can be found in the <a href="MetroGIS_Regional_Parcels_Attributes.pdf" target=_blank>MetroGIS Regional Parcels Attributes</a> document.
+<br>
+<br>The polygon layer contains one record for each real estate/tax parcel polygon within each county's parcel dataset.  Some counties have polygons for each individual condominium, and others do not.  (See Completeness in Section 2 of the metadata for more information.)  The points layer includes the same attribute fields as the polygon dataset.  The points are intended to provide information in situations where multiple tax parcels are represented by a single polygon.  One primary example of this is the condominium, though some counties stacked polygons for condos.  Condominiums, by definition, are legally owned as individual, taxed real estate units.  Records for condominiums may not show up in the polygon dataset.  The points for the point dataset often will be randomly placed or stacked within the parcel polygon with which they are associated.  
+<br>
+<br>The polygon layer is broken into individual county shape files.  The points layer is provided as both individual county files and as one file for the entire metro area.
+<br>
+<br>In many places a one-to-one relationship does not exist between these parcel polygons or points and the actual buildings or occupancy units that lie within them.  There may be many buildings on one parcel and there may be many occupancy units (e.g. apartments, stores or offices) within each building.  Additionally, no information exists within this dataset about residents of parcels.  Parcel owner and taxpayer information exists for many, but not all counties.
+<br>
+<br>This is a MetroGIS Regionally Endorsed dataset. 
+<br>
+<br>Additional information may be available from each county at the links listed below.  Also, any questions or comments about suspected errors or omissions in this dataset can be addressed to the contact person at each individual county.  
+<br>
+<br>Anoka = <a target="_blank" href="http://www.anokacounty.us/315/GIS&#xD;">http://www.anokacounty.us/315/GIS
+</a><br>Caver = <a target="_blank" href="http://www.co.carver.mn.us/GIS&#xD;">http://www.co.carver.mn.us/GIS
+</a><br>Dakota = <a target="_blank" href="http://www.co.dakota.mn.us/homeproperty/propertymaps/pages/default.aspx&#xD;">http://www.co.dakota.mn.us/homeproperty/propertymaps/pages/default.aspx
+</a><br>Hennepin = <a target="_blank" href="http://www.hennepin.us/gisopendata&#xD;">http://www.hennepin.us/gisopendata
+</a><br>Ramsey = <a target="_blank" href="https://www.ramseycounty.us/your-government/open-government/research-data&#xD;">https://www.ramseycounty.us/your-government/open-government/research-data
+</a><br>Scott = <a target="_blank" href="http://opendata.gis.co.scott.mn.us/">http://opendata.gis.co.scott.mn.us/</a> 
+<br>Washington: <a target="_blank" href="http://www.co.washington.mn.us/index.aspx?NID=1606">http://www.co.washington.mn.us/index.aspx?NID=1606</a><br></span></div><br><div class="mgmgel"><span>
+						Purpose: 
+					</span><span>To view, analyze and display parcel data anywhere in the seven county metro area.</span></div><br><div class="mgmgel"><span>
+						Time Period of Content Date:
+					</span><span>07/01/2018</span></div><br><div class="mgmgel"><span>
+						Currentness Reference: 
+					</span><span>All county datasets are current to within 30 days of the Time Period of Content date unless otherwise noted.</span></div><br><div class="mgmgel"><span>
+						Progress: 
+					</span><span>Complete</span></div><br><div class="mgmgel"><span>
+						Maintenance and Update Frequency:
+					</span><span>Quarterly</span></div><br><div class="mgmgel"><span>
+						Spatial Extent of Data:  
+					</span><span>Twin Cities 7 County Metropolitan Area.  This includes the counties of Anoka, Carver, Dakota, Hennepin, Ramsey, Scott and Washington in Minnesota.</span></div><br><div class="mgmgel"><span>
+						Bounding Coordinates:  
+					</span><span>-94.012<br>-92.732<br>45.415<br>44.471</span></div><br><div class="mgmgel"><span>
+						Place Keywords:
+					</span><span>Twin Cities, Anoka County, Carver County, Dakota County, Hennepin County, Ramsey County, Scott County, Washington County</span></div><br><div class="mgmgel"><span>
+						Theme Keywords:
+					</span><span>parcels, regional parcel data, cadastre, land ownership</span></div><br><div class="mgmgel"><span>
+						Theme Keyword Thesaurus: 
+					</span><span>None</span></div><br><div class="mgmgel"><span>
+						Access Constraints:
+					</span><span>None. This dataset is public data under the Minnesota Government Data Practices Act.</span></div><br><div class="mgmgel"><span>
+						Use Constraints:
+					</span><span>None. This dataset is public data under the Minnesota Government Data Practices Act.</span></div><br><div class="mgmgel"><span>
+						Contact Person Information: 
+					</span><span>See County website links in the Abstract for individual county contact information, or, Tanya Mayer,
+							GIS Specialist<br>Metropolitan Council<br>390 Robert Street North<br>St. Paul,
+							MN&nbsp;
+							55101-1805<br>
+							Phone: 651.602.1604<br>
+							Email: <A href="mailto:tanya.mayer@metc.state.mn.us">tanya.mayer@metc.state.mn.us</A></span></div><br><div class="mgmgel"><span>
+						Browse Graphic:  
+					</span><span><A href="ftp://ftp.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_metrogis/plan_regonal_prcls_open/metadata/preview.jpg">Click to view a data sample</A>.
+								<br>Sample map showing the MetroGIS Regional Parcel Data.<br></span></div><br><div class="mgmgel"><span>
+						Associated Data Sets:
+					</span><span>Regional Parcel Dataset - Seven County Twin Cities Metropolitan Area
+<br>2002 - current</span></div><br><h2><a name="Data_Quality_Information"></a>
+					Section 2: Data Quality
+				</h2><div class="mgmgel"><span>
+						Attribute Accuracy: 
+					</span><span>A standard set of attribute fields is included for each county.  However, not all attributes are available for all counties.  No attempt has been made by MetroGIS to assess the accuracy of the attribute data.
+<br>
+<br>Additional or missing attributes may be available from local assessors.
+<br>
+<br>Any questions or comments about suspected errors or omissions in this dataset can be addressed to the contact person listed in the individual county metadata.   Links to that metadata can be found in the Horizontal Positional Accuracy element below.</span></div><br><div class="mgmgel"><span>
+						Logical Consistency:
+					</span><span>No attempt was made to edgematch or rubbersheet the seven counties, thus overlaps and gaps will exist between counties.  Not all tax parcels are represented by a unique polygon.   For example, a county might have one polygon representing a condominium complex.  Some counties have provided an additional parcel points shape file that will include points to represent such tax parcels (e.g. a point for each individual condominium).</span></div><br><div class="mgmgel"><span>
+						Completeness:
+					</span><span>For parcel attributes, see Section 5 of this metadata.
+<br>
+<br>Any questions or comments about suspected errors or omissions in this dataset can be addressed to the contact person listed in the individual county metadata.   
+<br>
+<br>Inclusion of Condominiums in Polygon Dataset:
+<br>Some counties include condominium information within their polygon dataset and others do not.  Some information on this topic is shown below.  Contact each county for further information.
+<br>
+<br>Dakota
+<br>One polygon is included in the polygon dataset for the geography of the larger common area of a condominium building or complex.  Individual condominium units are only represented in the points dataset. 
+<br>
+<br>Ramsey (July 2018)
+<br>Polygons are included for all condominiums.  The only 1 to many polygon/points are for manufactured homes
+<br>
+<br></span></div><br><div class="mgmgel"><span>
+						Horizontal Positional Accuracy:
+					</span><span>For additional information please visit each counties link below.
+<br>Anoka = <a target="_blank" href="http://www.anokacounty.us/315/GIS&#xD;">http://www.anokacounty.us/315/GIS
+</a><br>Caver = <a target="_blank" href="http://www.co.carver.mn.us/GIS&#xD;">http://www.co.carver.mn.us/GIS
+</a><br>Dakota = <a target="_blank" href="http://www.co.dakota.mn.us/homeproperty/propertymaps/pages/default.aspx&#xD;">http://www.co.dakota.mn.us/homeproperty/propertymaps/pages/default.aspx
+</a><br>Hennepin = <a target="_blank" href="http://www.hennepin.us/gisopendata&#xD;">http://www.hennepin.us/gisopendata
+</a><br>Ramsey = <a target="_blank" href="https://www.ramseycounty.us/your-government/open-government/research-data">https://www.ramseycounty.us/your-government/open-government/research-data</a> 
+<br>Scott = <a target="_blank" href="http://opendata.gis.co.scott.mn.us/">http://opendata.gis.co.scott.mn.us/</a> 
+<br>Washington = <a target="_blank" href="http://www.co.washington.mn.us/index.aspx?NID=1606">http://www.co.washington.mn.us/index.aspx?NID=1606</a></span></div><br><br><div class="mgmgel"><span>
+						Lineage:
+					</span><span>Each county provided parcel polygons and points with attributes in shape file format with UTM coordinates, to the Metropolitan Council.  The Metropolitan Council checked each shape file to insure it had the specified field names, types, lengths and order.  
+<br>
+<br>No attempt was made to edgematch or rubber sheet the parcel geography between counties.</span></div><br><h2 class="unused"><a name="Spatial_Data_Organization_Information"></a>
+					Section 3: Spatial Data Organization (not used in this metadata)
+				</h2><br><h2><a name="Spatial_Reference_Information"></a>
+					Section 4: Coordinate System
+				</h2><div class="mgmgel"><span>
+						Horizontal Coordinate Scheme:
+					</span><span>Universal Transverse Mercator</span></div><br><div class="mgmgel"><span>
+							UTM Zone Number:
+						</span><span>15</span></div><br><div class="mgmgel"><span>
+						Horizontal Datum:
+					</span><span>NAD83</span></div><br><div class="mgmgel"><span>
+						Horizontal Units:
+					</span><span>meters</span></div><br><div class="mgmgel"><span>
+						Vertical Datum:
+					</span><span></span></div><br><div class="mgmgel"><span>
+						Vertical Units:
+					</span><span></span></div><br><div class="mgmgel"><span>
+						Depth Datum:
+					</span><span></span></div><br><div class="mgmgel"><span>
+						Depth Units:
+					</span><span></span></div><br><h2><a name="Entity_and_Attribute_Information"></a>
+					Section 5: Attributes
+				</h2><div class="mgmgel"><span>
+						Overview:
+					</span><span>A standard set of attribute fields is included for each county.  The attributes
+<br>are identical for the point and polygon datasets.  Not all attributes fields 
+<br>are populated by each county.
+<br>
+<br>A list of the attribute names is shown below.  Detailed information about the 
+<br>attributes can be found in the <a href="MetroGIS_Regional_Parcels_Attributes.pdf" target=_blank>MetroGIS Regional Parcels Attributes</a> document.
+<br>
+<br>COUNTY_ID:   Unique County ID               (text     3)
+<br>PIN:         Unique Parcel ID               (text    17)
+<br>BLDG_NUM:    House Number                  (text    10)
+<br>PREFIX_DIR:  Street Prefix Direction        (text     2)
+<br>PREFIXTYPE:  Street Prefix Type             (text     6)
+<br>STREETNAME:  Street Name                    (text    40)
+<br>STREETTYPE:  Street Type                    (text     4)
+<br>SUFFIX_DIR:  Street Suffix Direction        (text     2)
+<br>UNIT_INFO:   Unit Information               (text    12)
+<br>CITY:        City (actual)                  (text    30)
+<br>CITY_USPS:   City (mailing)                 (text    30)
+<br>ZIP:         ZIP Code                       (text     5)
+<br>ZIP4:        ZIP 4 Extension                (text     4)
+<br>PLAT_NAME:   Legal Description Plat Name    (text    50)
+<br>BLOCK:       Legal Description Block        (text     5)
+<br>LOT:         Legal Description Lot          (text     5)
+<br>ACRES_POLY:  Polygon Acreage               (numeric 11) (2 dec)
+<br>ACRES_DEED:  Deeded Acreage                 (numeric 11) (2 dec)
+<br>USE1_DESC:   Use Type 1                     (text   100)
+<br>USE2_DESC:   Use Type 2                     (text   100)
+<br>USE3_DESC:   Use Type 3                     (text   100)
+<br>USE4_DESC:   Use Type 4                     (text   100)
+<br>MULTI_USES:  Multiple Uses                  (text     1)
+<br>LANDMARK:    Landmark/Business Name        (text   100)
+<br>OWNER_NAME:  Owner Name                     (text    50)
+<br>OWNER_MORE:  Additional Owner Name          (text    50)
+<br>OWN_ADD_L1:  Owner Address Line 1           (text    40)
+<br>OWN_ADD_L2:  Owner Address Line 2           (text    40)
+<br>OWN_ADD_L3:  Owner Address Line 3           (text    40)
+<br>TAX_NAME:    Taxpayer Name                  (text    40)
+<br>TAX_ADD_L1:  Taxpayer Address Line 1        (text    40)
+<br>TAX_ADD_L2:  Taxpayer Address Line 2        (text    40)
+<br>TAX_ADD_L3:  Taxpayer Address Line 3        (text    40)
+<br>HOMESTEAD:   Homestead Status               (text     1)
+<br>EMV_LAND:    Est. Market Value - Land       (numeric 11)
+<br>EMV_BLDG:    Est. Market Value - Buildings (numeric 11)
+<br>EMV_TOTAL:   Est. Market Value - Total      (numeric 11)
+<br>TAX_CAPAC:   Tax Capacity                   (numeric 11)
+<br>TOTAL_TAX:   Total Tax                      (numeric 11)
+<br>SPEC_ASSES:  Special Assessments            (numeric 11)
+<br>TAX_EXEMPT:  Tax Exempt Status              (text     1)
+<br>XUSE1_DESC:  Exempt Use 1                   (text   100)
+<br>XUSE2_DESC:  Exempt Use 2                   (text   100)
+<br>XUSE3_DESC:  Exempt Use 3                   (text   100)
+<br>XUSE4_DESC:  Exempt Use 4                   (text   100)
+<br>DWELL_TYPE:  Dwelling Type                  (text    30)
+<br>HOME_STYLE:  Home Style                     (text    30)
+<br>FIN_SQ_FT:   Square Footage                 (numeric 11)
+<br>GARAGE:      Garage                         (text     1)
+<br>GARAGESQFT:  Garage Square Footage          (text    11)
+<br>BASEMENT:    Basement                       (text     1)
+<br>HEATING:     Heating                        (text    30)
+<br>COOLING:     Cooling                        (text    30)
+<br>YEAR_BUILT:  Year Built                     (numeric  4)
+<br>NUM_UNITS:   Number of Units                (text     6)
+<br>SALE_DATE:   Last Sales Date                (date     8)
+<br>SALE_VALUE:  Last Sales Value               (numeric 11)
+<br>SCHOOL_DST:  School District                (text     6)
+<br>WSHD_DIST:   Watershed District             (text    50)
+<br>GREEN_ACRE:  Green Acres                    (text     1)
+<br>OPEN_SPACE:  Open Space                     (text     1)
+<br>AG_PRESERV:  Agricultural Preserve          (text     1)
+<br>AGPRE_ENRD:  Ag. Preserve Enrolled          (date     8)
+<br>AGPRE_EXPD:  Ag. Preserve Expiration        (date     8)
+<br>PARC_CODE:   Parcel Polygon to Parcel Point (numeric  2) 
+<br>            and PIN Relationship Code</span></div><br><div class="mgmgel"><span>
+						Detailed Citation:
+					</span><span>A detailed description of the attributes available in this dataset can be found in the <a href="MetroGIS_Regional_Parcels_Attributes.pdf" target=_blank>MetroGIS Regional Parcels Attributes</a> document.</span></div><br><div class="mgmgel"><span>
+						Table Detail:
+					</span></div><h2><a name="Distribution_Information"></a>
+					Section 6: Distribution
+				</h2><div class="mgmgel"><span>
+						Publisher:
+					</span><span>Metro Counties</span></div><br><div class="mgmgel"><span>
+						Publication Date:
+					</span><span>07/01/2018</span></div><br><div class="mgmgel"><span>
+						Contact Person Information:
+					</span><span>Tanya Mayer,
+							GIS Specialist<br>Metropolitan Council<br>390 Robert Street North<br>St. Paul,
+							MN&nbsp;
+							55101-1805<br>
+							Phone: 651.602.1604<br>
+							Email: <A href="mailto:tanya.mayer@metc.state.mn.us">tanya.mayer@metc.state.mn.us</A></span></div><br><div class="mgmgel"><span>
+						Distributor's Data Set Identifier:
+					</span><span>MetroGIS Regional Parcels Free Version</span></div><br><div class="mgmgel"><span>
+						Distribution Liability:
+					</span><span>ANOKA
+<br>The information provided on this site is for reference purposes only. The information is not suitable for legal, engineering or surveying purposes. Anoka County does not guarantee the accuracy of the information contained herein. The Information is furnished on an 'as is' basis with no representation or warranties, either express or implied, for the merchantability or fitness of the information provided on this site for a particular purpose. The preceding disclaimer is provided pursuant to Minnesota Statutes §466.03, Sub. 21, and the user of the information provided herein acknowledges that Anoka County shall not be liable for any damages, and expressly waives all claims, and agrees to defend, indemnify, and hold harmless Anoka County from any and all claims brought by anyone who uses the information provided for herein, its employees or agents, or third parties which arise out of user's access.
+<br>
+<br>CARVER
+<br>The data provided herewith is for reference purposes only. This data is not suitable for legal, engineering, surveying or other similar purposes. Carver County does not guarantee the accuracy of the information contained herein. This data is furnished on an 'as is' basis and Carver County makes no representations or warranties, either expressed or implied, for the merchantability or fitness of the information provided for any purpose.  This disclaimer is provided pursuant to Minnesota Statutes §466.03 and the user of the data provided herein acknowledges that Carver County shall not be liable for any damages, and by using this data in any way expressly waives all claims, and agrees to defend, indemnify, and hold harmless Carver County, its officials, officers, agents, employees, etc. from any and all claims brought by anyone who uses the information provided for herein, its employees or agents, or third parties which arise out of user's access. By acceptance of this data, the user agrees not to transmit this data or provide access to it or any part of it to another party unless the user includes with the data a copy of this disclaimer.
+<br>
+<br>DAKOTA 
+<br>NOTICE: Dakota County Geographic Information System (GIS) Data are made available pursuant to the Minnesota Government Data Practices Act (Minnesota Statutes Chapter 13). The GIS Data are provided to you as is and without any warranty as to their performance, merchantability, or fitness for any particular purpose. The GIS Data were developed by Dakota County ("County") for their own internal business purposes. The County does not represent or warrant that the GIS Data or the data documentation are error-free, complete, current or accurate. You are responsible for any consequences resulting from your use of the GIS Data or your reliance on the GIS Data. You should consult the data documentation for this particular GIS Data to determine the limitations of the GIS Data and the precision with which the GIS Data may depict distance, direction, location, or other geographic features. If you transmit or provide the GIS Data (or any portion of it) to another user, you must provide a copy of this disclaimer and the accompanying metadata for this dataset to the user.
+<br>
+<br>HENNEPIN
+<br>This data (i) is furnished "AS IS" with no representation as to completeness or accuracy; (ii) is furnished with no warranty of any kind; and (iii) is not suitable for legal, engineering or surveying purposes. Hennepin County shall not be liable for any damage, injury or loss resulting from this data.  
+<br>
+<br>RAMSEY
+<br>EXCEPT AS EXPRESSLY STATED HEREIN, THIS DATA IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. USER BEARS ANY AND ALL RISK RELATING TO QUALITY AND PERFORMANCE OF THIS DATA. 
+<br>Limit on Liability: This data is not a legally recorded map or survey and is not intended to be used as one. This data is a compilation of records and information from various state, county, and city offices, and other sources, and should be used for reference only. 
+<br>In no event will the County of Ramsey be liable for direct, indirect, special, incidental, or consequential damages arising out of the use of, or inability to use, the data, even if advised of the possibility of such damages. Specifically, the County of Ramsey is not responsible for any costs including, but not limited to, those incurred as a result of lost profits or revenue, loss of use of data, the costs of recovering such programs or data, the cost of any substitute programs or data, claims by third parties, or for other similar costs.
+<br>
+<br>SCOTT
+<br>Disclaimer: This information is to be used for reference purposes only. Scott County does not guarantee accuracy of the material contained herein and is not responsible for misuse or misinterpretation. The preceding disclaimer is provided pursuant to Minnesota Statutes 466.03, Subd. 21, and the user of this service acknowledges that Scott County shall not be liable for any damages, and expressly waives all claims, and agrees to defend, indemnify, and hold harmless Scott County from any and all claims brought by User, its employees or agents, or third parties which arise out of the user's access or use of data provided.
+<br>
+<br>WASHINGTON
+<br>This data (i) is furnished "AS IS" with no representation as to completeness or accuracy; (ii) is furnished with no warranty of any kind; and (iii) is not suitable for legal, engineering or surveying purposes. Washington  County shall not be liable for any damage, injury or loss resulting from this data.
+<br></span></div><br><div class="mgmgel"><span><a name="ordering"></a>
+						Ordering Instructions:
+					</span><span>See Online Linkage Below</span></div><br><div class="mgmgel"><span><font color="#B40404">Online Linkage:</font></span><span><A href="https://gisdata.mn.gov/dataset/us-mn-state-metrogis-plan-regonal-prcls-open"> I AGREE</A>
+											to the notice in "Distribution Liability" above. Clicking to agree will either begin the download process, link to a service, or provide more instructions. See "Ordering Instructions" above for details.
+								</span></div><br><h2><a name="Metadata_Reference_Information"></a>
+					Section 7: Metadata Reference
+				</h2><div class="mgmgel"><span>
+						Metadata Date:
+					</span><span>07/10/2018</span></div><br><div class="mgmgel"><span>
+						Contact Person Information:
+					</span><span>Tanya Mayer,
+						GIS Specialist<br>Metropolitan Council<br>390 Robert Street North<br>St. Paul,
+						MN&nbsp;
+						55101-1805<br>
+						Phone: 651.602.1604<br>
+						Email: <A href="mailto:tanya.mayer@metc.state.mn.us">tanya.mayer@metc.state.mn.us</A></span></div><br><div class="mgmgel"><span>
+						Metadata Standard Name:
+					</span><span>Minnesota Geographic Metadata Guidelines</span></div><br><div class="mgmgel"><span>
+						Metadata Standard Version:
+					</span><span>1.2</span></div><br><div class="mgmgel"><span>
+						Metadata Standard Online Linkage:
+					</span><span><A TARGET="viewer" HREF="https://www.mngeo.state.mn.us/committee/standards/mgmg/metadata.htm">https://www.mngeo.state.mn.us/committee/standards/mgmg/metadata.htm</A></span></div><br><p></p><hr><div class="smallish"> This page last updated:
+				07/10/2018<br><A HREF="#Top"> Go back to top</A><p></p><em class="unused">Created with <a href="https://github.com/MetropolitanCouncil/MME">MGMG stylesheet</a> version 2017.04.25.1</em></div></div></font></body></html>
